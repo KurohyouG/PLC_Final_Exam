@@ -1,0 +1,7 @@
+Locks and Keys vs Tombstone
+
+Safety?
+Tombstone is safer than the lock and key methond since the pointer does not actaully point to the dynamic heap varible but instead to the tombstone and an error can be detected if a pointer points to a nil tombstone or tries to directly access the memory location of the dynamic heap varible, while in the lock and key methond the pointer points to the heap dynamic varible's lock value which is apart of the heap dynamic varible and whose memory location can still be illegally accessed by an invalid pointer.
+
+Implementation?
+The tombstone in the tombstone method takes up memory space that can not be reallocated once not in use anymore and extra processing uis used to follow the path from the pointer to the data through the tombstone but in the lock and key method the only thing being created is a n integer value that is used as the dynamic heap varible's lock and pointer's key. To access the data you have to only compare the lock value with the key value.
