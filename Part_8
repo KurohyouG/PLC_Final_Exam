@@ -49,3 +49,43 @@ for (int i = 0; i < 3; i++){
   temp = 3 - i;
   j = temp;
 }
+/******************************************************************************************************/
+/*Section D */
+
+j = -3;
+for (i=0; i<3; i++){
+switch (j+2){
+case 3:
+case 2: j--; break;
+case 0: j += 2; break;
+default: j = 0;
+}
+if (j>0) break;
+j = 3-i
+}
+
+
+j := -3
+i := 0
+loop: if i<3 == 0 goto out
+j := j + 2
+if j == 3
+jt case2
+if j == 2
+jt case2
+if j == 0
+jt case0
+j := 0
+jmp over
+case2:
+j := j - 1 goto over
+case 0:
+j := j + 2
+over:
+if j <= 0
+jf end
+j := 3 - i
+end:
+i := i + 1
+goto loop
+out:
