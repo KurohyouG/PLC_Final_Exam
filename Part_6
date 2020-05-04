@@ -1,0 +1,54 @@
+/* Nested Selections */
+
+if(first > second)
+	if(first > third)
+		max = first
+		if(second > third)
+			mid = second
+			min = third
+		else
+			mid = third
+			min = seoncd
+	else
+		mid = first
+		max = third
+		min = second
+else if (first > third)
+	max = second
+	mid = first
+	min = third
+else
+	min = first
+	if(second > third)
+		mid = third
+		max = second
+	else
+		mid = second
+		max = third
+
+
+/* Non Nested Slection */
+if ((first >= second) && (second >= third))
+	max = first
+	mid = second
+	min = third
+if ((first >= third) && (third >= second))
+	max = first
+	mid = third
+	min = second	
+if ((second >= first) && (first >= third))
+	max = second
+	mid = first
+	min = third
+if ((second >= third) && (third >= first))
+	max = second
+	mid = third
+	min = first
+if ((third >= first) && (first >= second))
+	max = third
+	mid = first
+	min = second
+if ((third >= second) && (second >= first))
+	max = third
+	mid = second
+	min = first
