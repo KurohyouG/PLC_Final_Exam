@@ -1,0 +1,32 @@
+Four Criteria
+The weakest precondition implies the loop invariant (P => I)
+The loop invariant and the boolean expression followed by a program statements equal the loop invariant {I and B} S {I}
+The loop invariant and the inverse of the boolean expression implies the post condition (I and (not B)) => Q
+the loop terminates
+/***********************************************************/
+                    a = 1;
+                    b = 1;
+                    while (b <= n){
+                      a = a * x;
+                      b = b + 1;
+                    }
+                    {a = x ^ n}
+/***********************************************************/
+P = {b < n}
+B = {b <= n}
+I = {b < n}
+Q = {a = x ^ n}
+
+Rule 1
+P = {b < n} => {b < n} = I
+
+Rule 2
+{I and B} S {I}
+{b < n} and {b <= n}
+    b = b + 1
+{b < n}
+
+Rule 3
+I and !B => Q
+{b < n} and !{b <= n} => {a = x ^ n}
+{b < n} and {b > n} => {a = x ^ n} false
