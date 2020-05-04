@@ -1,0 +1,10 @@
+<expr> -> <assi> {(= | += | -= | *= | /= | %= | &= | ^= | |= | <<= | >>= | >>>=) <assi>}
+<assi> -> <logor> {|| <logor>}
+<logor> -> <logand> {&& <logand>}
+<logand> -> <equ> {(== | != <equ>}
+<equ> -> <rel> {(> | >= | < | <=) <rel>}
+<rel> -> <term> {(+ | -) <term>}
+<term> -> <factor> {(* | / | %) <factor>}
+<factor> -> {(- | -- | + | ++ | !)} <preu> 
+<preu> -> <postu> {(++ | --)}
+<postu> -> id | int_constant | ( <expr> )
